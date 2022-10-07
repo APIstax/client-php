@@ -1,6 +1,6 @@
 {
   "name": "apistax/client",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Secure and reliable APIs for your common business needs.",
   "type": "library",
   "keywords": [
