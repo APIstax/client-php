@@ -1,5 +1,3 @@
-![APIstax](https://apistax.io/user/assets/opengraph.png)
-
 # APIstax PHP Client
 
 [![Latest Version](https://img.shields.io/github/release/apistax/client-php.svg?style=flat-square)](https://github.com/apistax/client-php/releases)
