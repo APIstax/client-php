@@ -1,0 +1,42 @@
+{
+  "name": "apistax/client",
+  "version": "1.0.0",
+  "description": "Secure and reliable APIs for your common business needs.",
+  "type": "library",
+  "keywords": [
+    "apistax"
+  ],
+  "homepage": "https://apistax.io",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Max Holzleitner",
+      "email": "max.holzleitner@instant-it.at",
+      "homepage": "https://instant-it.at"
+    },
+    {
+      "name": "David Andlinger",
+      "email": "david.andlinger@instant-it.at",
+      "homepage": "https://instant-it.at"
+    }
+  ],
+  "support": {
+    "email": "support@apistax.io",
+    "source": "https://github.com/APIstax/client-php",
+    "docs": "https://apistax.io/docs"
+  },
+  "readme": "README.MD",
+  "require": {
+    "php": "^7.3 || ^8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^7.3",
+    "guzzlehttp/psr7": "^1.7 || ^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "APIstax\\": "lib/"
+    }
+  }
+}
