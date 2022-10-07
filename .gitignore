@@ -134,3 +134,4 @@ Temporary Items
 
 .openapi-generator
 gen
+/composer.lock
