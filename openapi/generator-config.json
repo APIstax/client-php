@@ -8,6 +8,6 @@
     "models": "",
     "modelDocs": "false",
     "modelTests": "false",
-    "supportingFiles": "ObjectSerializer.php,ModelInterface.php"
+    "supportingFiles": "ObjectSerializer.php,ModelInterface.php,Configuration.php"
   }
 }
