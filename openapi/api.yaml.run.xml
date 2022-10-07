@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="api.yaml" type="SwaggerCodegen">
+    <option name="activeConfigurationType" value="FILE" />
+    <option name="configurationPath" value="$PROJECT_DIR$/openapi/generator-config.json" />
+    <option name="customJreEnabled" value="false" />
+    <option name="customTemplatesPath" value="" />
+    <option name="enableDebugLogging" value="false" />
+    <option name="generateToPath" value="$PROJECT_DIR$" />
+    <option name="generationParameters">
+      <list />
+    </option>
+    <option name="generatorPath" value="https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.4.0/openapi-generator-cli-5.4.0.jar" />
+    <option name="jdkPath" value="Default" />
+    <option name="language" value="php" />
+    <option name="specificationPath" value="$PROJECT_DIR$/openapi/api.yaml" />
+    <method v="2" />
+  </configuration>
+</component>

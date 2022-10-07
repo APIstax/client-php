@@ -1,0 +1,13 @@
+{
+  "modelPackage": "Models",
+  "invokerPackage": "APIstax",
+  "globalProperties": {
+    "apis": "false",
+    "apiDocs": "false",
+    "apiTests": "false",
+    "models": "",
+    "modelDocs": "false",
+    "modelTests": "false",
+    "supportingFiles": "ObjectSerializer.php,ModelInterface.php"
+  }
+}
