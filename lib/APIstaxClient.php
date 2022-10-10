@@ -180,7 +180,8 @@ class APIstaxClient
                 'User-Agent' => 'apistax-php-client',
                 'Content-Type' => 'application/json',
                 'Authorization' => 'Bearer ' . $this->configuration->getApiKey()
-            ]
+            ],
+            'http_errors' => false
         ];
 
         if (isset($query)) {
