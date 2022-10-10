@@ -20,22 +20,25 @@ use SplFileObject;
 
 class APIstaxClient
 {
-    private const baseUrl = "https://api.apistax.io";
-
     /**
      * @var ClientInterface
      */
     private $client;
 
     /**
-     * @var string
+     * @var Configuration
      */
-    private $apiKey;
+    private $configuration;
 
-    public function __construct(string $apiKey)
+    public function __construct(Configuration $configuration = null)
     {
         $this->client = new Client();
-        $this->apiKey = $apiKey;
+
+        if($configuration === null) {
+            $this->configuration = Configuration::getDefaultConfiguration();
+        } else {
+            $this->configuration = $configuration;
+        }
     }
 
     /**
@@ -87,7 +90,7 @@ class APIstaxClient
      */
     public function geocodeSearch(GeocodeSearchPayload $payload): ?GeocodeResult
     {
-        return $this->requestJson("/v1/geocode/search", $payload, null, "\APIstax\Models\GeocodeSearchPayload");
+        return $this->requestJson("/v1/geocode/search", $payload, null, "\APIstax\Models\GeocodeResult");
     }
 
     /**
@@ -100,7 +103,7 @@ class APIstaxClient
      */
     public function geocodeReverse(GeocodeReversePayload $payload): ?GeocodeResult
     {
-        return $this->requestJson("/v1/geocode/reverse", $payload, null, "\APIstax\Models\GeocodeReversePayload");
+        return $this->requestJson("/v1/geocode/reverse", $payload, null, "\APIstax\Models\GeocodeResult");
     }
 
     /**
@@ -147,7 +150,7 @@ class APIstaxClient
      */
     private function request(string $path, $body, $query = null): ResponseInterface
     {
-        $url = self::baseUrl . $path;
+        $url = $this->configuration->getHost() . $path;
         $options = $this->createRequestOptions($body, $query);
 
         try {
@@ -176,8 +179,9 @@ class APIstaxClient
             'headers' => [
                 'User-Agent' => 'apistax-php-client',
                 'Content-Type' => 'application/json',
-                'Authorization' => 'Bearer ' . $this->apiKey
-            ]
+                'Authorization' => 'Bearer ' . $this->configuration->getApiKey()
+            ],
+            'http_errors' => false
         ];
 
         if (isset($query)) {

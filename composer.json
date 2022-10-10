@@ -1,6 +1,6 @@
 {
   "name": "apistax/client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Secure and reliable APIs for your common business needs.",
   "type": "library",
   "keywords": [
@@ -33,6 +33,10 @@
     "ext-mbstring": "*",
     "guzzlehttp/guzzle": "^7.3",
     "guzzlehttp/psr7": "^1.7 || ^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9",
+    "donatj/mock-webserver": "^v2.5.0"
   },
   "autoload": {
     "psr-4": {

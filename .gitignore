@@ -134,4 +134,5 @@ Temporary Items
 
 .openapi-generator
 gen
-/composer.lock
+composer.lock
+.phpunit.result.cache
