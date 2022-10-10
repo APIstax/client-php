@@ -35,7 +35,8 @@
     "guzzlehttp/psr7": "^1.7 || ^2.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9"
+    "phpunit/phpunit": "^9",
+    "donatj/mock-webserver": "^v2.5.0"
   },
   "autoload": {
     "psr-4": {
