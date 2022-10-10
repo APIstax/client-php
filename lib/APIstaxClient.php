@@ -90,7 +90,7 @@ class APIstaxClient
      */
     public function geocodeSearch(GeocodeSearchPayload $payload): ?GeocodeResult
     {
-        return $this->requestJson("/v1/geocode/search", $payload, null, "\APIstax\Models\GeocodeSearchPayload");
+        return $this->requestJson("/v1/geocode/search", $payload, null, "\APIstax\Models\GeocodeResult");
     }
 
     /**
@@ -103,7 +103,7 @@ class APIstaxClient
      */
     public function geocodeReverse(GeocodeReversePayload $payload): ?GeocodeResult
     {
-        return $this->requestJson("/v1/geocode/reverse", $payload, null, "\APIstax\Models\GeocodeReversePayload");
+        return $this->requestJson("/v1/geocode/reverse", $payload, null, "\APIstax\Models\GeocodeResult");
     }
 
     /**
